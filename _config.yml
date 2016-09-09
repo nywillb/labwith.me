@@ -1,0 +1,60 @@
+# name of the software
+name: LabWith.Me
+# current version of the software
+version: 1.1.0
+# url of the download button
+downloadUrl: https://github.com/mistic100/jekyll-bootstrap-doc
+# licence of the software
+license: MIT License
+licenseUrl: http://opensource.org/licenses/MIT
+
+# list of additional links on the right of the top menu
+headerLinks:
+  - title: Courses
+    url: https://courses.dalton.org
+  - title: Schedules
+    url: https://schedules.dalton.org
+
+# list if additional links on the footer
+footerLinks:
+  - title: Courses
+    url: https://courses.dalton.org
+  - title: Schedules
+    url: https://schedules.dalton.org
+
+# header
+header:
+  color1: "#525252"
+  color2: "#3d72b4"
+  trianglify: true
+
+# google analytics
+analytics:
+  account:
+  domain:
+
+# github buttons
+githubButton:
+  user: mistic100
+  repo: jekyll-bootstrap-doc
+
+# twitter buttons
+twitter:
+  enabled: false
+  via:
+  hash:
+  account:
+
+# facebook buttons
+facebook:
+  enabled: false
+  profileUrl:
+
+
+exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile']
+
+gems:
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
