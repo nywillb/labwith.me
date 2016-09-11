@@ -21,12 +21,25 @@
       background:#525252;
       background:linear-gradient(135deg, #525252, #3d72b4);
     }
+
+    .inlineSchedule{
+      background: url(assets/images/loader.gif) center center no-repeat;
+      background-size: 100px 100px;
+    }
   </style>
+
+  <script>
+    function inlineSchedule(url, divID) {
+      console.log("Inline Schedule Activated")
+      document.getElementById(divID).innerHTML = '<iframe src="' + url + '" width="100%" height="700" frameborder="0">Your browser does not support inline scheduling. Please visit ' + url + ' to schedule a lab.'
+    }
+  </script>
 
   <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
   <script src="/assets/js/docs.min.js"></script>
+  <script src="/assets/js/inlineScheduling.js"></script>
 </head>
 
 <body>
@@ -104,21 +117,25 @@
   Ms. Bensky has a pink book on her desk titled "Schedule A lab". Look at her schedule (located next to the binder) and find a time that works for you. Write the time down in the binder.
   <h3 id="manuel">Dr. Manuel</h3>
   Find a time that works for you and Dr. Manuel on <a href="https://calendar.google.com/calendar/b/0/embed?title=Dr.+Manuel%27s+Lab+Schedule&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=1u1love089au0gat03s836b2vk@group.calendar.google.com&amp;color=%23125A12&amp;src=7ctgu58j2p9qdbhg9u35dva9bg@group.calendar.google.com&amp;color=%23856508&amp;ctz=America/New_York">Dr. Manuel's Schedule</a>, then click the button below to schedule your lab.<br><br>
-  <a class="btn btn-outline btn-lg" href="https://spreadsheets.google.com/viewform?formkey=dFZWMV9rUXB4TFJscDBRa0JqbHYwc2c6MQ">Lab With Dr. Manuel</a>
+  <button class="btn btn-outline btn-lg" onclick='inlineSchedule("https://spreadsheets.google.com/viewform?formkey=dFZWMV9rUXB4TFJscDBRa0JqbHYwc2c6MQ", "manuelLink")'>Lab With Dr. Manuel</button>
+  <div id="manuelLink" class="inlineSchedule"></div>
 </section>
 
 <section class="bs-docs-section">
   <h1 id="Science" class="page-header">Science</h1>
   <h3 id="cuello">Dr. Cuello</h3>
   Click the button below to lab with Dr. Cuello.<br><br>
-  <a class="btn btn-outline btn-lg" href="https://pcuello.youcanbook.me">Lab with Dr. Cuello</a>
+  <button class="btn btn-outline btn-lg" onclick='inlineSchedule("https://pcuello.youcanbook.me", "cuelloLink")'>Lab with Dr. Cuello</button>
+  <div id="cuelloLink" class="inlineSchedule"></div>
+
 </section>
 
 <section class="bs-docs-section">
   <h1 id="History" class="page-header">History</h1>
   <h2 id="jones">Ms. Jones</h2>
   Click on the button below to lab with Ms. Jones.<br><br>
-  <a class="btn btn-outline btn-lg" href="https://ejones.youcanbook.me">Lab with Ms. Jones</a>
+  <button class="btn btn-outline btn-lg" onclick='inlineSchedule("https://ejones.youcanbook.me", "jonesLink")'>Lab with Ms. Jones</button>
+  <div id="jonesLink" class="inlineSchedule"></div>
 </section>
 
 <section class="bs-docs-section">
