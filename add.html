@@ -1,0 +1,131 @@
+---
+layout: default
+title: Add a teacher
+description:
+isHome: false
+---
+<script>
+  function emailForm(){
+    location.href = "mailto:c20wb@dalton.org?subject=lab&body=" + $('form').serialize();
+  }
+</script>
+
+<section class="bs-docs-section">
+	<h1 class="page-header" id="form">Add a teacher</h1>
+	<form class="form-horizontal">
+		<fieldset>
+			<!-- Form Name -->
+			<legend>Add a teacher</legend> <!-- Text input-->
+
+
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="studentName">Your Name</label>
+
+				<div class="col-md-4">
+					<input class="form-control input-md" id="studentName" name="studentName"
+					placeholder="" type="text"> <span class="help-block">what is your
+					name?</span>
+				</div>
+			</div>
+			<!-- Appended Input-->
+
+
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="studentemail">Your
+				Email</label>
+
+				<div class="col-md-4">
+					<div class="input-group">
+						<input class="form-control" id="studentemail" name="studentemail"
+						placeholder="cXXyy" type="text"> <span class=
+						"input-group-addon">@dalton.org</span>
+					</div>
+
+
+					<p class="help-block">What is your email address?</p>
+				</div>
+			</div>
+			<!-- Text input-->
+
+
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Name</label>
+
+				<div class="col-md-4">
+					<input class="form-control input-md" id="textinput" name="textinput"
+					placeholder="" required="" type="text"> <span class="help-block">Insert
+					the name of the teacher here.</span>
+				</div>
+			</div>
+			<!-- Text input-->
+
+
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="subject">Subject</label>
+
+				<div class="col-md-4">
+					<input class="form-control input-md" id="subject" name="subject"
+					placeholder="" type="text"> <span class="help-block">What subject do they
+					teach?</span>
+				</div>
+			</div>
+			<!-- Multiple Checkboxes -->
+
+
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="signUpMethod">How do you sign
+				up for a lab? (Check all that apply)</label>
+
+				<div class="col-md-4">
+					<div class="checkbox">
+						<label for="signUpMethod-0"><input id="signUpMethod-0" name=
+						"signUpMethod" type="checkbox" value="email"> Email</label>
+					</div>
+
+
+					<div class="checkbox">
+						<label for="signUpMethod-1"><input id="signUpMethod-1" name=
+						"signUpMethod" type="checkbox" value="inPerson"> In Person (This
+						includes visiting their desk)</label>
+					</div>
+
+
+					<div class="checkbox">
+						<label for="signUpMethod-2"><input id="signUpMethod-2" name=
+						"signUpMethod" type="checkbox" value="website"> Through a website (such
+						as youcanbook.me or Google Forms)</label>
+					</div>
+
+
+					<div class="checkbox">
+						<label for="signUpMethod-3"><input id="signUpMethod-3" name=
+						"signUpMethod" type="checkbox" value="other"> Other</label>
+					</div>
+				</div>
+			</div>
+			<!-- Textarea -->
+
+
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="explanation">Please
+				explain.</label>
+
+				<div class="col-md-4">
+					<textarea class="form-control" id="explanation" name=
+					"explanation"></textarea>
+				</div>
+			</div>
+			<!-- Button -->
+
+
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="email">Open emal!</label>
+
+				<div class="col-md-4">
+					<button class="btn btn-outline" id="email" name="email" onclick="emailForm()">Open
+					Email!</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</section>
